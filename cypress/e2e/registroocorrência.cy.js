@@ -1,6 +1,6 @@
-describe('Usuario', function() {
+describe('RegistroOcorrência', function() {
 
-    it('MenuUsuarioUsuario', function() {
+    it('MenuRegistroOcorrência', function() {
 
         cy.visit('https://localhost:44371/')
 
@@ -21,12 +21,10 @@ describe('Usuario', function() {
         cy.get('.btn-menu-container > :nth-child(1) > :nth-child(1) > .rz-navigation-item-link').click()
 
         cy.wait(2000)
-
-        cy.get('[style=""] > :nth-child(7) > :nth-child(1) > .rz-navigation-item-link').click()
+        
+        cy.contains("a", "Registro Ocorrência").click()
 
         cy.wait(2000)
-
-        cy.get(':nth-child(2) > .rz-navigation-item-active > .rz-navigation-menu > :nth-child(1) > .rz-navigation-item-wrapper > .rz-navigation-item-link').click()
         
     })
        

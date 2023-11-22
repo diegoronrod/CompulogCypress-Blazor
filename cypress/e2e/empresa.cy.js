@@ -1,6 +1,6 @@
-describe('empresa', function() {
+describe('Empresa', function() {
 
-    it('empresa', function() {
+    it('MenuEmpresa', function() {
 
         cy.visit('https://localhost:44371/')
 

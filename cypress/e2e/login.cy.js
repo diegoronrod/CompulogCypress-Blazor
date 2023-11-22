@@ -1,6 +1,6 @@
-describe('login', function() {
+describe('Login', function() {
 
-    it('loginUsuario', function() {
+    it('MenuLoginUsuario', function() {
     
            cy.visit('https://localhost:44371/')
   
@@ -14,9 +14,6 @@ describe('login', function() {
 
            cy.get('*[class^="rz-button rz-button-md rz-variant-filled rz-primary rz-shade-default margin-left-auto"]').click()
 
-           cy.wait(5000)
-
-          
     })
        
   })
