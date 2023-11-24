@@ -1,6 +1,6 @@
 describe('Motorista', function() {
 
-    it('MenuMotorista', function() {
+    it('PesquisarMotorista', function() {
 
         cy.visit('https://localhost:44371/')
 
@@ -19,13 +19,19 @@ describe('Motorista', function() {
         //------------------------------------------------------------------------------------------//
     
         cy.get('.btn-menu-container > :nth-child(1) > :nth-child(1) > .rz-navigation-item-link').click()
-
-        cy.wait(2000)
         
-        cy.contains("a", "Empresa").click()
+        cy.contains("a", "Motorista").click()
 
-        cy.wait(2000)
-        
+        cy.get('#NomeBuscar').click()
+
+        cy.get('#NomeBuscar').type('Camila')
+
+        cy.wait(1000)
+
+        cy.contains('Pesquisar').click()
+
+        cy.contains('Roncatto')
+
     })
        
   })

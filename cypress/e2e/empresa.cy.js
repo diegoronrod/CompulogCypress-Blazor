@@ -19,12 +19,8 @@ describe('Empresa', function() {
         //------------------------------------------------------------------------------------------//
     
         cy.get('.btn-menu-container > :nth-child(1) > :nth-child(1) > .rz-navigation-item-link').click()
-
-        cy.wait(2000)
         
         cy.contains("a", "Empresa").click()
-
-        cy.wait(2000)
         
     })
        

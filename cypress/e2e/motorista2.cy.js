@@ -1,6 +1,6 @@
-describe('RegistroOcorrência', function() {
+describe('Motorista', function() {
 
-    it('MenuRegistroOcorrência', function() {
+    it('AdicionarMotorista', function() {
 
         cy.visit('https://localhost:44371/')
 
@@ -19,8 +19,22 @@ describe('RegistroOcorrência', function() {
         //------------------------------------------------------------------------------------------//
     
         cy.get('.btn-menu-container > :nth-child(1) > :nth-child(1) > .rz-navigation-item-link').click()
+        
+        cy.contains("a", "Motorista").click()
 
-        cy.contains("a", "Registro Ocorrência").click()
+        cy.get('#CadastroBTN').click()
+
+        cy.get("#Nome").click()
+
+        cy.get("#Nome").type('Roncatto')
+
+        cy.wait(1000)
+
+        cy.get('#CPF').click
+
+        cy.get("#CPF").type('78864811001')
+
+        cy.get('#CadMotoBTN').click()
 
     })
        
