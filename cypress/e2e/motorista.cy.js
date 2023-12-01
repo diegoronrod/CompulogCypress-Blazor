@@ -24,13 +24,13 @@ describe('Motorista', function() {
 
         cy.get('#NomeBuscar').click()
 
-        cy.get('#NomeBuscar').type('Camila')
+        cy.get('#NomeBuscar').type('Andre')
 
         cy.wait(1000)
 
         cy.contains('Pesquisar').click()
 
-        cy.contains('Roncatto')
+        cy.contains('Andre')
 
     })
        
