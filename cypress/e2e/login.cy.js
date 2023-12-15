@@ -4,12 +4,13 @@
 
 /* describe('Login', function() {
 
-    it('MenuLoginUsuario', function() {
+    it('LoginUsuario', function() {
        cy.visit('/')
-       cy.get('*[class^="flex-column margin-bottom-1"]').click()
-       cy.get('*[class^="flex-column margin-bottom-1"]').type('00744618002')
-       cy.get('*[class^="flex-column margin-bottom-2"]').click()
-       cy.get('*[class^="flex-column margin-bottom-2"]').type('D12r10r82#')
-       cy.get('*[class^="rz-button rz-button-md rz-variant-filled rz-primary rz-shade-default margin-left-auto"]').click()
+        cy.get('[data-cy="CampoUser"]').click()
+        cy.get('[data-cy="CampoUser"]').type('00744618002')
+        cy.get('[data-cy="CampoSenha"]').click()
+        cy.get('[data-cy="CampoSenha"]').type('D12r10r82#')
+        cy.get('[data-cy="LoginBTN"]').click()
+        cy.wait(4000)
     })
   }) */

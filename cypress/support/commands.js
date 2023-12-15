@@ -29,10 +29,10 @@ Cypress.Commands.add('login', (username, password) =>
     cy.session([username, password], () =>
     {
         cy.visit('/')
-        cy.get('*[class^="flex-column margin-bottom-1"]').click()
-        cy.get('*[class^="flex-column margin-bottom-1"]').type(username)
-        cy.get('*[class^="flex-column margin-bottom-2"]').click()
-        cy.get('*[class^="flex-column margin-bottom-2"]').type(password)
+        cy.get('[data-cy="CampoUser"]').click()
+        cy.get('[data-cy="CampoUser"]').type(username)
+        cy.get('[data-cy="CampoSenha"]').click()
+        cy.get('[data-cy="CampoSenha"]').type(password)
         cy.get('[data-cy="LoginBTN"]').click()
         cy.wait(4000)
     },

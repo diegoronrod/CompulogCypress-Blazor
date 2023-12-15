@@ -1,16 +1,16 @@
 beforeEach(() => 
 {
-    cy.login('00744618002', 'D12r10r82#')
+    cy.login('00744618002', 'D12r10r82#') //Colocar usuário que queira testar.
 })
 
 it('PesquisarMotorista', () => {
     cy.visit('/')
-    cy.get('.btn-menu-container > :nth-child(1) > :nth-child(1) > .rz-navigation-item-link').click()
-    cy.contains("a", "Motorista").click()
-    cy.get('#NomeBuscar').click()
-    cy.get('#NomeBuscar').type('Diego')
+    cy.get('[data-cy="Cadastro"]').click()
+    cy.get('[data-cy="Motorista"]').click()
+    cy.get('[data-cy="CampoNome"]').click()
+    cy.get('[data-cy="CampoNome"]').type('Diego')
     cy.wait(1000)
     cy.get('[data-cy="BuscarBTN"]').click()
     cy.wait(4000)
-    cy.contains('08192816908')
+    cy.contains('00000000000')
 });
