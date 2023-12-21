@@ -30,8 +30,10 @@ Cypress.Commands.add('login', (username, password) =>
     {
         cy.visit('/')
         cy.get('[data-cy="CampoUser"]').click()
+        cy.focused().clear()
         cy.get('[data-cy="CampoUser"]').type(username)
         cy.get('[data-cy="CampoSenha"]').click()
+        cy.focused().clear()
         cy.get('[data-cy="CampoSenha"]').type(password)
         cy.get('[data-cy="LoginBTN"]').click()
         cy.wait(4000)

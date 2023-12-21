@@ -1,6 +1,6 @@
 beforeEach(() => 
 {
-    cy.login('00744618002', 'D12r10r82#') //Colocar usuário que queira testar.
+    cy.login('02068171007', 'Cardoso2018') //Colocar usuário que queira testar.
 })
 
 it('Empresa', () => {
